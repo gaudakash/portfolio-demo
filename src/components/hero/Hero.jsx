@@ -1,3 +1,4 @@
+import React from "react";
 import "./Hero.scss";
 import { motion } from "framer-motion";
 
@@ -57,8 +58,8 @@ const Hero = () => {
           <motion.img
             variants={txtvarients}
             animate="scrollbtn"
-            src="/scroll.png"
-            alt=""
+            src="src/assests/scroll.png"
+            alt="scrollimg"
           />
         </motion.div>
       </div>
@@ -71,7 +72,7 @@ const Hero = () => {
         Frontend Developer Learner and a Tech Enthusiast
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero.png" alt="" />
+        <img src="src/assests/hero.png" alt="akashgaudaimg" />
       </div>
     </div>
   );

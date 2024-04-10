@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .services {
   background: linear-gradient(180deg, #0c0c1d, #111132);
   height: 100%;
@@ -12,17 +14,44 @@
     align-items: center;
     gap: 20px;
 
+    @include mobile {
+      flex: 0;
+      align-self: center;
+      flex-direction: column;
+    }
+
+    @include Tab {
+      flex: 0;
+      flex-direction: row-reverse;
+    }
+
     p {
       font-weight: 200;
       font-size: 20px;
       color: grey;
       text-align: right;
+
+      @include mobile {
+        font-size: 15px;
+        text-align: center;
+        margin: 15px 0;
+      }
+
+      @include Tab {
+        font-size: 15px;
+        text-align: center;
+        margin: 15px 0;
+      }
     }
 
     hr {
       width: 500px;
       border: none;
       border-top: -0.5px solid gray;
+
+      @include mobile {
+        width: 100px;
+      }
     }
   }
 
@@ -32,21 +61,52 @@
     flex-direction: column;
     align-items: center;
 
+    @include mobile {
+      width: 100%;
+    }
+
     .title {
       display: flex;
       align-items: center;
       gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+
+      @include Tab {
+        flex: 1;
+        flex-direction: row;
+        text-align: center;
+        gap: 12px;
+      }
 
       img {
         width: 300px;
         height: 100px;
         border-radius: 50px;
         object-fit: cover;
+
+        @include mobile {
+          width: 100px;
+        }
+        @include Tab {
+          width: 100px;
+        }
       }
 
       h1 {
         font-size: 96px;
         font-weight: 100;
+
+        @include mobile {
+          font-size: 50px;
+        }
+        @include Tab {
+          font-size: 60px;
+        }
       }
 
       button {
@@ -57,6 +117,19 @@
         border: none;
         font-size: 24px;
         // cursor: pointer;
+
+        @include mobile {
+          width: 200px;
+          margin-bottom: 30px;
+          font-size: 12px;
+          height: 50px;
+        }
+
+        @include Tab {
+          width: 200px;
+          font-size: 18px;
+          height: 50px;
+        }
       }
     }
   }
@@ -66,6 +139,35 @@
     max-width: 1366px;
     margin: auto;
 
+    @include mobile {
+      width: 100%;
+      flex-direction: column;
+      overflow-y: scroll;
+    }
+
+    @include Tab {
+      width: 100%;
+      flex-direction: column;
+      overflow-y: scroll;
+    }
+
+    p {
+      @include mobile {
+        display: none;
+      }
+
+      @include Tab {
+        margin: 10px auto;
+      }
+    }
+
+    h2 {
+      @include mobile {
+        text-align: center;
+        margin: 10px;
+      }
+    }
+
     .box {
       padding: 50px;
       border: 0.5px solid grey;
@@ -73,11 +175,28 @@
       flex-direction: column;
       justify-content: space-between;
 
+      @include mobile {
+        border: none;
+      }
+
+      @include Tab {
+        border: none;
+      }
       button {
         padding: 10px;
         background-color: orange;
         border: none;
         cursor: pointer;
+
+        @include mobile {
+          border: none;
+          border-radius: 10px;
+        }
+
+        @include Tab {
+          font-size: 15px;
+          border-radius: 5px;
+        }
       }
     }
   }

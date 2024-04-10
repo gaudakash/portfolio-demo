@@ -1,3 +1,4 @@
+import React from "react";
 import { useRef } from "react";
 import "./Services.scss";
 import { color, motion, useInView } from "framer-motion";
@@ -30,7 +31,7 @@ const Services = () => {
       // animate="animate"
       //whileInView="animate" its apply when scroll top to down
       ref={ref}
-      // animate={isInView && "animate"}
+      //animate={isInView && "animate"}
       animate={"animate"}
     >
       <motion.div className="txtContainer" variants={variants}>
@@ -42,7 +43,7 @@ const Services = () => {
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="/people.webp" alt="" />
+          <img src="src/assests/people.webp" alt="people" />
           <h1>
             <motion.b whileHover={{ color: "orange" }}>Unique</motion.b>Idea
           </h1>

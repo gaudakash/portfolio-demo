@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .contact {
   height: 100%;
   max-width: 1366px;
@@ -6,15 +8,53 @@
   align-items: center;
   gap: 50px;
 
+  @include mobile {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  @include Tab {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
   .txtContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 40px;
 
+    @include mobile {
+      gap: 30px;
+      text-align: center;
+      margin-top: 45px;
+    }
+
+    @include Tab {
+      gap: 30px;
+      text-align: center;
+      margin-top: 45px;
+    }
+
+    @include Desktop {
+      margin-left: 35px;
+    }
+
     h1 {
       font-size: 100px;
       line-height: 89px;
+
+      @include mobile {
+        font-size: 58px;
+        line-height: 50px;
+      }
+
+      @include Tab {
+        font-size: 35px;
+        line-height: 50px;
+      }
     }
 
     span {
@@ -26,6 +66,10 @@
     flex: 1;
     position: relative;
 
+    @include Tab {
+      width: 400px;
+    }
+
     .phoneSvg {
       position: absolute;
       margin: auto;
@@ -33,16 +77,38 @@
       width: 450px;
       height: 450px;
       z-index: -1;
+
+      @include mobile {
+        width: 300px;
+        height: 300px;
+      }
+
+      @include Tab {
+        width: 400px;
+        height: 400px;
+      }
     }
   }
 
   .formContainer {
     flex: 1;
 
+    @include mobile {
+      width: 80%;
+    }
+
     form {
       display: flex;
       flex-direction: column;
       gap: 20px;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      @include Desktop {
+        margin-right: 35px;
+      }
 
       input,
       textarea {
@@ -51,6 +117,10 @@
         padding: 1px solid #fff;
         color: #fff;
         border-radius: 5px;
+
+        @include mobile {
+          width: 100%;
+        }
       }
       button {
         padding: 20px;

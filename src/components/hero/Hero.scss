@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .hero {
   height: calc(100vh - 100px);
   overflow: hidden; // calaculate height from body to nav
@@ -18,14 +20,38 @@
     justify-content: center;
     gap: 40px;
 
+    @include mobile {
+      width: 100%;
+      height: 40%;
+      gap: 10px;
+      align-items: center;
+      text-align: center;
+    }
+
+    @include Tab {
+      width: 100%;
+      height: 40%;
+      gap: 10px;
+      align-items: center;
+      text-align: center;
+    }
+
+    @include Desktop {
+      margin-left: 40px;
+    }
+
     h2 {
       font-size: 25px;
       color: aqua;
       letter-spacing: 10px;
+
+      @include mobile {
+        font-size: 16px;
+      }
     }
 
     h1 {
-      font-size: 88px;
+      font-size: 55px;
     }
 
     .buttons {
@@ -52,10 +78,28 @@
     top: 0;
     right: 0;
 
+    @include mobile {
+      height: 55%;
+      width: 100%;
+      top: unset;
+      bottom: 0;
+    }
+
+    @include Tab {
+      height: 60%;
+      width: 100%;
+      top: unset;
+      bottom: 0;
+    }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @include Tab {
+        object-fit: contain;
+      }
     }
   }
 

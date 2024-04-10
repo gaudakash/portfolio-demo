@@ -23,3 +23,21 @@ section {
   height: 100vh; //to give vertical height of an section part of each
   scroll-snap-align: center; //to animated the text from center to top of the page
 }
+
+@mixin mobile {
+  @media (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin Tab {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin Desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}

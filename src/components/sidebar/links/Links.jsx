@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 
 const variants = {
@@ -26,7 +27,7 @@ const itemVariants = {
 };
 
 const Links = () => {
-  const item = ["Homepage", "Services", "Portfolio","Contact"];
+  const item = ["Homepage", "Services", "Portfolio", "Contact"];
   return (
     <motion.div className="links" variants={variants}>
       {item.map((item) => (

@@ -1,6 +1,6 @@
+import React from "react";
 import "./app.scss";
 import Hero from "./components/hero/Hero";
-
 import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/parallax";
 import Portfolio from "./components/portfolio/Portfolio";
@@ -13,7 +13,7 @@ const App = () => {
       <Cursor />
       <section id="Homepage">
         <Navbar />
-        <Hero />
+        {<Hero />}
       </section>
       <section id="Services">
         <Parallax type="services" />

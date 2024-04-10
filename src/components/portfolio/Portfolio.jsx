@@ -1,3 +1,4 @@
+import React from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import "./Portfolio.scss";
@@ -34,7 +35,7 @@ const Single = ({ item }) => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    // offset: ["start start", "end start"],
+    //offset: ["start start", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
